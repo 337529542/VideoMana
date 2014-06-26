@@ -1,0 +1,4 @@
+http://www.cnblogs.com/ballwql/archive/2011/03/28/1997494.html
+http://www.sqlite.org/c3ref/funclist.html
+http://www.sqlite.com.cn/MySqlite/6/408.Html
+http://www.adp-gmbh.ch/sqlite/wrapper.html
