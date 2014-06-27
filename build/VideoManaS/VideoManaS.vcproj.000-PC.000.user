@@ -11,7 +11,7 @@
 			<DebugSettings
 				Command="$(TargetPath)"
 				WorkingDirectory="D:\proj\VideoMana"
-				CommandArguments=""
+				CommandArguments="&quot;D:\Ñ¸À×ÏÂÔØ\sdsd ¹þ»ªÊ¢¶Ù\\&quot;"
 				Attach="false"
 				DebuggerType="3"
 				Remote="1"

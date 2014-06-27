@@ -86,7 +86,7 @@ int VideoService::getDuration(std::wstring filename)
 		int h, m, s;
 		sscanf(str.substr(pos+10, 20).c_str(), "%d:%d:%d", &h, &m, &s);
 		duration = h*3600 + m * 60 + s;
-		printf("\nresult is %d, %d, %d, %d\n", h, m, s, duration);
+		//printf("\nresult is %d, %d, %d, %d\n", h, m, s, duration);
 	}
 
 	return duration;
@@ -100,7 +100,7 @@ bool VideoService::getImage(std::wstring filename, int time, VideoImage *vimg)
 	//…˙≥…Õº∆¨
 	wchar_t aaa[20];
 	wsprintf(aaa, L"%d", time);
-	std::wstring strCmd = L"bin\\ffmpeg.exe -i \""+ filename + std::wstring(L"\" -y -ss ") + std::wstring(aaa) + std::wstring(L" -t 0.001 tmp.jpg");//cmd√¸¡Ó
+	std::wstring strCmd = L"bin\\ffmpeg.exe -ss "+ std::wstring(aaa) + std::wstring(L" -i \"") + filename + std::wstring(L"\" -f image2 -y tmp.jpg");//cmd√¸¡Ó
 	SECURITY_ATTRIBUTES sa;
 	HANDLE hRead,hWrite;
 	sa.nLength = sizeof(SECURITY_ATTRIBUTES);

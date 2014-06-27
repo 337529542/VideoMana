@@ -179,6 +179,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\src\Server.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\..\src\sqlite3.c"
 				>
 			</File>
@@ -206,6 +210,10 @@
 			</File>
 			<File
 				RelativePath="..\..\src\FileService.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\Server.h"
 				>
 			</File>
 			<File
