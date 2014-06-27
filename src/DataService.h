@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "SQLiteWrapper.h"
 
 class dbFiles
 {
@@ -26,20 +27,23 @@ public:
 	char *pbuf;
 
 	void setBufSize(int sizeinbyte);
+	int getBufSize();
 	dbImage();
 	~dbImage();
+
+private:
+	int s;
 };
 
 class DataService
 {
 public:
 	bool Open(char *filename);//打开数据库连接
-	void Close();//关闭数据库连接
 
 	bool Files_Insert(dbFiles f);//插入文件
-	bool Files_Check(dbFiles f);//检查是否有重名文件(仅检查Active的文件)
+	bool Files_Check(char *filename);//检查是否有重名文件(仅检查Active的文件)
 	bool Files_UpdatePath(dbFiles f);//更新文件路径
-	bool Files_DeActive(dbFiles f);//设置文件的active属性=0(移除该条记录)
+	bool Files_DeActive(char *filename);//设置文件的active属性=0(移除该条记录)
 	bool Files_GetInfoByName(char* filename, dbFiles *pf);//获取文件属性(仅获取active的文件的属性)
 	bool Files_GetInfoByNum(int num, dbFiles *pf);//通过序号（不是id）获取文件,返回false为到末尾
 
@@ -47,4 +51,8 @@ public:
 	bool Img_Get(char *filename, dbImage *pImg, int num);//获取图片信息
 	//bool Img_RemoveByID();//删除一张图片
 	bool Img_RemoveByFileName(char *filename);//删除与这个FileName关联的所有图片
+
+private:
+	SQLiteWrapper sqlite;
+
 };

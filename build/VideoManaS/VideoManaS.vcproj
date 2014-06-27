@@ -174,6 +174,26 @@
 				RelativePath="..\..\src\DataService.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\..\src\FileService.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\sqlite3.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\SQLiteWrapper.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\VideoManaS.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\VideoService.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Í·ÎÄ¼þ"
@@ -182,6 +202,30 @@
 			>
 			<File
 				RelativePath="..\..\src\DataService.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\FileService.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\sqlite3.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\sqlite3ext.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\SQLiteWrapper.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\UniService.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\VideoService.h"
 				>
 			</File>
 		</Filter>
